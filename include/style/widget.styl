@@ -4,6 +4,9 @@
             ul
                 margin-right: 0
 
+        a
+            transition: background-color 0.3s ease-in-out
+
         .level
             margin-bottom: 0
 
@@ -25,6 +28,10 @@
         .tag:last-child
             background: $light-grey
             color: $white-invert
+
+#toc
+    max-height: calc(100vh - 22px)
+    overflow-y: scroll
 
 .level.is-multiline
     flex-wrap: wrap

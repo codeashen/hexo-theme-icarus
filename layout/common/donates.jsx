@@ -12,7 +12,7 @@ module.exports = class extends Component {
         }
         return <div class="card">
             <div class="card-content">
-                <h3 class="menu-label has-text-centered">{__('donate.title')}</h3>
+                <h3 class="menu-label has-text-centered has-text-weight-normal">{__('donate.title')}</h3>
                 <div class="buttons is-centered">
                     {donates.map(service => {
                         const type = service.type;
