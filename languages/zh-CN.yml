@@ -17,7 +17,7 @@ common:
     prev: '上一页'
     next: '下一页'
 widget:
-    follow: '关注我'
+    follow: 'Follow'
     recents: '最新文章'
     links: '链接'
     catalogue: '目录'
@@ -28,7 +28,7 @@ widget:
 article:
     created_at: '%s发表'
     updated_at: '%s更新'
-    more: '阅读更多'
+    more: 'Read more'
     comments: '评论'
     read_time: '%s读完'
     word_count:

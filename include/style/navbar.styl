@@ -40,7 +40,7 @@ $navbar-item-font-size ?= 1.125em
         font-size: $navbar-item-font-size
         font-family: 'PT Sans Narrow', sans-serif
         font-weight: bold
-        text-transform: uppercase
+        // text-transform: uppercase
 
         &.is-active
             background-color: transparent
@@ -59,6 +59,10 @@ $navbar-item-font-size ?= 1.125em
 .navbar-logo
     img
         max-height: $logo-height
+
+.log-text
+    font-size: 1.25em
+    color: #3273dc
 
 @media screen and (min-width: $desktop)
     .navbar > .container .navbar-menu, .container > .navbar .navbar-menu

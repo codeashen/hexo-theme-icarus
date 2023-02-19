@@ -117,7 +117,11 @@ module.exports = class extends Component {
                     {page.tags && page.tags.length ? <div class="article-tags is-size-7 is-uppercase">
                         <i class="fas fa-tags has-text-grey"></i>&nbsp;
                         {page.tags.map((tag, index) => {
-                            return <a class="link-muted" rel="tag" href={url_for(tag.path)}>{tag.name}{index !== page.tags.length-1? ', ':''}</a>;
+                            // return <a class="link-muted mr-2" rel="tag" href={url_for(tag.path)}>{tag.name}</a>;
+                            return <span>
+                                <a class="link-muted" rel="tag" href={url_for(tag.path)}>{tag.name}{index !== page.tags.length-1? ', ':''}</a>
+                                &nbsp;
+                            </span>
                         })}
                     </div> : null}
                     {/* "Read more" button */}
