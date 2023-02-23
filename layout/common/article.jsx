@@ -98,9 +98,11 @@ module.exports = class extends Component {
                                 })()}
                             </span> : null}
                             {/* Visitor counter */}
-                            {!index && plugins && plugins.busuanzi === true ? <span class="level-item" id="busuanzi_container_page_pv" dangerouslySetInnerHTML={{
-                                __html: _p('plugin.visit_count', '<i class="far fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv">0</span>')
-                            }}></span> : null}
+                            {!index && plugins && plugins.busuanzi === true && article && article.show_visit === true ? 
+                                <span class="level-item" id="busuanzi_container_page_pv">
+                                    <i class="far fa-eye"></i>&nbsp;
+                                    <span id="busuanzi_value_page_pv">0</span>
+                            </span> : null}
                         </div>
                     </div> : null}
                     {/* Title */}

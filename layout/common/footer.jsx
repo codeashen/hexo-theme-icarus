@@ -14,7 +14,8 @@ class Footer extends Component {
             links,
             copyright,
             showVisitorCounter,
-            visitorCounterTitle
+            visitorCounterTitle,
+            visitCounterTitle
         } = this.props;
 
         let footerLogo = '';
@@ -43,8 +44,10 @@ class Footer extends Component {
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>&nbsp;&&nbsp;
                             <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
                             {showVisitorCounter ? <br /> : null}
-                            {showVisitorCounter ? <span id="busuanzi_container_site_uv"
-                                dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}
+                            {showVisitorCounter ? <span>
+                                <span id="busuanzi_container_site_uv" dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span>&nbsp;&nbsp;
+                                <span id="busuanzi_container_site_pv" dangerouslySetInnerHTML={{ __html: visitCounterTitle }}></span>
+                            </span> : null}
                         </p>
                         {copyright ? <p class="is-size-7" dangerouslySetInnerHTML={{ __html: copyright }}></p> : null}
                     </div>
@@ -95,7 +98,8 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         author,
         links,
         copyright: footer?.copyright ?? '',
-        showVisitorCounter: plugins && plugins.busuanzi === true,
-        visitorCounterTitle: _p('plugin.visitor_count', '<span id="busuanzi_value_site_uv">0</span>')
+        showVisitorCounter: plugins && plugins.busuanzi === true && footer && footer.show_visit === true,
+        visitorCounterTitle: _p('plugin.visitor_count', '<span id="busuanzi_value_site_uv">0</span>'),
+        visitCounterTitle: _p('plugin.visit_count', '<span id="busuanzi_value_site_pv">0</span>')
     };
 });

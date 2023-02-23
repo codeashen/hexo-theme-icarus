@@ -49,8 +49,8 @@ donate:
     buymeacoffee: 'Buy me a coffee'
 plugin:
     backtotop: 'Back to top'
-    visit_count: '%s&nbsp;visits'
-    visitor_count: 'Visited by %s users'
+    visit_count: 'Site PV: %s'
+    visitor_count: 'Site UV: %s'
     cookie_consent:
       message: This website uses cookies to improve your experience.
       dismiss: Got it!
